@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+:root {
+    --font-family: 'Montserrat', sans-serif;
+    --primary-color: hsla(331, 78%, 59%, 1);
+    --primary-opacity-color: hsla(331, 78%, 59%, .7);
+    --primary-hover-color: hsla(339, 97%, 73%, 1);
+    --dark-color: hsla(212, 29%, 19%, 1);
+    --grey-primary-color: hsla(211, 14%, 40%, 1);
+    --grey-secondary-color: hsla(210, 17%, 58%, 1);
+    --grey-optional-color: hsla(211, 36%, 84%, 1);
+    --grey-light-color: hsla(60, 11%, 98%, 1);
+    --grey-xlight-color: hsla(195, 10%, 92%, 1);
+    --light-color: hsla(0, 100%, 100%, 1);
+}
+.container-section {
+    --width: min(90%, 1360px);
+    --font-weight-xbold: 600;
+    --font-weight-bold: 500;
+    --font-weight-sbold: 400;
+    --font-weight-neutral: 300;
+    --font-weight-light: 200;
+    --font-weight-xlight: 100;
+}
+
+* {
+    font-family: var(--font-family);
+    color: var(--dark-color);
+    font-weight: 1rem;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0;
+}
+a:hover {
+    text-decoration: none;
+}
+.container-section {
+    width: var(--width);
+    margin-inline: auto;
+}
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 1rem;
+}
+h1 {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: var(--font-weight-xbold);
+    color: var(--dark-color);
+}
+h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: var(--font-weight-xbold);
+}
+h3 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    font-weight: var(--font-weight-sbold);
+}
+h4 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    font-weight: var(--font-weight-neutral);
+}
+h5 {
+    font-size: clamp(1rem, 5vw, 1.8rem);
+    font-weight: var(--font-weight-xlight);
+}
+p.body-1 {
+    font-size: clamp(1rem, 5vw, 1rem);
+    font-weight: var(--font-weight-xlight);
+}
+p.body-2 {
+    font-size: clamp(.8rem, 4vw, 1rem);
+    font-weight: var(--font-weight-xlight);
+}
+header {
+    background-image: linear-gradient(var(--grey-light-color), var(--grey-xlight-color));
+    height: 80vh;
+}
+.nav-link {
+    font-weight: 500;
+}
+.logo {
+    width: 2rem;
+    height: auto;
+}
+.border-0 {
+    border-radius: 0 !important;
+}
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 5px 10px var(--grey-secondary-color), 0 0 0 var(--grey-secondary-color);
+}
+.dropdown-item:focus {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+.btn {
+    padding: .8rem 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    font-size: 1rem;
+    transition: all .3s ease-out;
+    border-radius: 0;
+}
+.btn-lg {
+    padding: 1rem 2rem;
+}
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--light-color);
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited, .btn-primary:focus {
+    background-color: var(--primary-hover-color) !important;
+    box-shadow: none !important;
+    border-color: var(--primary-hover-color) !important;
+}
+.btn-outline {
+    background-color: transparent;
+}
+.btn-outline-primary {
+    border: 2px solid var(--primary-color);
+}
+.btn-outline-secondary {
+    border: 2px solid var(--primary-color) !important;
+    color: var(--primary-color);
+}
+.btn-outline-secondary:hover, .btn-outline-secondary:active, .btn-outline-secondary:visited, .btn-outline-secondary:focus {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: none !important;
+    color: var(--light-color);
+}
+.banner--carousel-container .content h1 {
+    font-size: clamp(2.2rem, 3vw, 3.5rem);
+}
+.banner--carousel-container {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 70vh;
+}
+.selection-panel {
+    background-color: var(--light-color);
+    position: relative;
+    z-index: inherit;
+}
+.selection-panel span {
+    color: var(--primary-color);
+}
+.selection-panel p {
+    font-weight: 600;
+}
+.selection-panel .text-muted {
+    font-size: .8rem;
+    color: var(--grey-secondary-color) !important;
+}
+.banner--carousel-container .content h1, .banner--carousel-container .content p {
+    color: var(--light-color);
+}
+.banner--carousel-container .content .btn.btn-outline-secondary {
+    border-color: var(--light-color) !important;
+    color: var(--light-color);
+}
+.selection-panel-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+.xs-selectors .selection-panel {
+    width: 100%;
+    position: absolute;
+    bottom: -15%;
+    left: 0;
+    right: 0;
+}
+.xs-selectors .selection-panel-container {
+    gap: unset;
+}
+.xs-selectors .selection-panel {
+    background-color: var(--grey-xlight-color) !important;
+}
+.xs-selectors .selection-panel-container > div {
+    flex: 1;
+}
+.banner--carousel-container.first-slide {
+    background: url('../assets/banner-1-sm.jpg') no-repeat center center fixed;
+}
+.banner--carousel-container.second-slide {
+    background: url('../assets/banner-1-sm.jpg') no-repeat center center fixed;
+}
+.banner--carousel-container.third-slide {
+    background: url('../assets/banner-1-sm.jpg') no-repeat center center fixed;
+}
+.vertical-rl-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-weight: var(--font-weight-neutral);
+    font-size: clamp(1rem, 4vw, 2rem);
+    color: var(--grey-secondary-color);
+}
+.bg-light {
+    background-color: var(--grey-xlight-color) !important;
+}
+.vertical-rl-text.text-sm {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+}
+[data-target="sub-section"] .container-section > div {
+    display: flex;
+    gap: 2rem;
+}
+[data-target="sub-section"] .container-section > div > div {
+    flex: 1;
+}
+.slick-dots li button::before {
+    color: var(--grey-secondary-color);
+}
+.slick-dots li.slick-active button::before {
+    color: var(--dark-color);
+}
+.sub-text {
+    color: var(--grey-secondary-color);
+}
+.card.card-frame {
+    box-shadow: 0 0 50px var(--grey-secondary-color), 0 0 0 var(--grey-secondary-color);
+}
+.details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: .5rem;
+}
+.details span {
+    color: var(--grey-secondary-color);
+}
+.details-bottom {
+    display: flex;
+    gap: 1rem;
+}
+.tag-link {
+    background-color: var(--grey-xlight-color);
+    color: var(--grey-secondary-color);
+}
+.price-tag p:first-of-type {
+    font-size: 3rem;
+    margin-right: .5rem;
+}
+.card-top-content.positioned {
+    display: grid;
+    place-items: center;
+    isolation: isolate;
+}
+.card-top-content.positioned > * {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+}
+.price-tag {
+    background-color: var(--primary-opacity-color);
+}
+.price-tag > * {
+    color: var(--light-color) !important;
+}
+[data-target="destination"] {
+    margin-top: 50%;
+}
+.text-hightlight > * {
+    background-color: var(--primary-hover-color);
+    color: var(--light-color);
+    padding: .5rem;
+    border-radius: 100px;
+}
+[data-target="sub-section"].sub-cover-bg {
+    background: url('https://images.alphacoders.com/269/269623.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+[data-target="sub-section"].sub-cover-bg * {
+    color: var(--light-color);
+}
+[data-target="footer-section"] ul li {
+    margin-bottom: .5rem;
+}
+[data-target="footer-section"] ul li a {
+    color: var(--grey-secondary-color);
+}
+[data-target="footer-section"] ul li a:hover {
+    color: var(--primary-hover-color);
+    text-decoration: none;
+}
+[data-target="footer-section"] .form-control {
+    border-radius: 0;
+    padding: 2.2rem 5rem 2.2rem 2.2rem;
+}
+[data-target="footer-section"] .card {
+    box-shadow: 0 0 20px var(--grey-xlight-color), 0 0 0 var(--grey-xlight-color);
+}
+.social-links {
+    display: flex;
+    gap: .5rem;
+}
+.social-links * {
+    color: var(--dark-color);
+}
+.social-links a {
+    background-color: var(--grey-xlight-color);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.send-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.send-btn span {
+    color: var(--primary-color) !important;
+}
+.menu-btn {
+    background-color: transparent;
+    border: none;
+}
+.menu-btn * {
+    color: var(--dark-color);
+    font-size: 2rem;
+}
+.menu-modal .modal-dialog {
+    max-width: 100%;
+    margin: 0 auto;
+}
+.menu-modal .modal-content {
+    min-height: 100vh;
+    border-radius: 0;
+}
+.menu-container a {
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    color: var(--grey-primary-color);
+    margin-bottom: 1.2rem;
+}
+.menu-content {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.menu-content {
+    display: none;
+}
+.menu-header > * {
+    color: var(--grey-primary-color);
+}
+.menu-modal .close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    z-index: 1;
+}
+.menu-container {
+    margin-top: 5%;
+}
+@media (min-width: 576px) {
+    .xs-selectors .selection-panel {
+        width: 500px;
+        bottom: 0;
+    }
+    [data-target="destination"] {
+        margin-top: 15%;
+    }
+}
+@media (min-width: 992px) {
+    [data-target="destination"] {
+        margin-top: 5%;
+    }
+    .banner--carousel-container.first-slide {
+        background: url('../assets/banner-1.jpg') no-repeat center center fixed;
+    }
+    .banner--carousel-container.second-slide {
+        background: url('../assets/banner-1.jpg') no-repeat center center fixed;
+    }
+    .banner--carousel-container.third-slide {
+        background: url('../assets/banner-1.jpg') no-repeat center center fixed;
+    }
+    .logo {
+        width: 8rem;
+    }
+    .selection-panel {
+        position: absolute;
+        bottom: 25%;
+    }
+    .banner--carousel-container .content {
+        background-color: transparent;
+        width: 44%;
+        height: 100%;
+    }
+    .banner--carousel-container .content h1, .banner--carousel-container .content p {
+        color: inherit;
+    }
+    .banner--carousel-container .content .btn.btn-outline-secondary {
+        background-color: inherit !important;
+        color: var(--dark-color);
+        border-color: var(--dark-color) !important;
+    }
+}
